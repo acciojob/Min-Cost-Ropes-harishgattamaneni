@@ -1,6 +1,6 @@
 function mincost(arr)
 { 
-	arr.sort()
+	arr.sort((a,b) => a-b)
 	let ans=0
 	while(arr.length>1){
         let temp=arr[0]+arr[1]
@@ -8,7 +8,7 @@ function mincost(arr)
         arr.shift()
         arr.shift()
         arr.push(temp)
-        arr.sort()
+        arr.sort((a,b) => a-b)
     }
     return ans
 }
